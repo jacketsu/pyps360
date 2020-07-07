@@ -1,4 +1,5 @@
-from powerscribe import Powerscribe
+# from powerscribe import Powerscribe
+from powerscribe.Powerscribe import Powerscribe
 
 if __name__ == '__main__':
     # http://psrbtst01ta.tjh.tju.edu/RadPortal/login.aspx
