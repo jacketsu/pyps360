@@ -7,17 +7,18 @@ if __name__ == '__main__':
     username = "infervision"
     password = "infervision"
 
-    accession = "12345"
+    accession = "20117672"
     field_name = "CTRAD"
     field_value = "29997"
 
     with Powerscribe(url) as ps:
         if ps.sign_in(username, password):
             print("Signin successfully")
-            # if ps.set_custom_field(accession, field_name, field_value):
+            if ps.set_custom_field(accession, field_name, field_value):
+                print("set succeeds")
                 # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
-            # else:
+            else:
                 # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
-                
+                print("set fail")
         else:
             print("Signin failed")
