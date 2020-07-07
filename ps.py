@@ -16,6 +16,6 @@ if __name__ == '__main__':
             if ps.set_custom_field(accession, field_name, field_value):
                 print(f"Sent field name {field_name} and value {field_value} into accession {accession})
             else:
-                print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
+                print(f"Error sending field name {field_name} and value {field_value} into accession {accession})
         else:
             print("Signin failed")
