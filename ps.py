@@ -26,13 +26,13 @@ if __name__ == '__main__':
     #Test login failed func
     print("Testing failed log func")
     with Powerscribe(url) as ps:
-    if ps.sign_in("123", "123"):
-        print("Signin successfully")
-        if ps.set_custom_field(accession, field_name, field_value):
-            print("set succeeds")
-            # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
+        if ps.sign_in("123", "123"):
+            print("Signin successfully")
+            if ps.set_custom_field(accession, field_name, field_value):
+                print("set succeeds")
+                # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
+            else:
+                # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
+                print("set fail")
         else:
-            # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
-            print("set fail")
-    else:
-        print("Signin failed")
+            print("Signin failed")
