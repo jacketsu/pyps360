@@ -1,5 +1,5 @@
 # from powerscribe import Powerscribe
-from powerscribe.Powerscribe import Powerscribe
+from powerscribe import Powerscribe
 
 if __name__ == '__main__':
     # http://psrbtst01ta.tjh.tju.edu/RadPortal/login.aspx
@@ -22,17 +22,22 @@ if __name__ == '__main__':
                 print("set fail")
         else:
             print("Signin failed")
+
+            #Test getting order
+            order = ps.try_get_order(accession)
+            print(order)
+
     
     #Test login failed func
-    print("Testing failed log func")
-    with Powerscribe(url) as ps:
-        if ps.sign_in("123", "123"):
-            print("Signin successfully")
-            if ps.set_custom_field(accession, field_name, field_value):
-                print("set succeeds")
-                # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
-            else:
-                # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
-                print("set fail")
-        else:
-            print("Signin failed")
+    # print("Testing failed log func")
+    # with Powerscribe(url) as ps:
+    #     if ps.sign_in("123", "123"):
+    #         print("Signin successfully")
+    #         if ps.set_custom_field(accession, field_name, field_value):
+    #             print("set succeeds")
+    #             # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
+    #         else:
+    #             # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
+    #             print("set fail")
+    #     else:
+    #         print("Signin failed")
