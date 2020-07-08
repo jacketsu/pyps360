@@ -26,6 +26,8 @@ if __name__ == '__main__':
             #Test getting order
             order = ps.try_get_order(accession)
             print(order)
+            custom_field_defination = ps.get_custom_filed_definitions(accession)
+            print(custom_field_defination)
             #Test getting order
 
         else:

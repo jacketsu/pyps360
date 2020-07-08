@@ -76,6 +76,16 @@ class Powerscribe():
             return success, order_id_search.group(1)
         else:
             return success, None
+      
+    def get_custom_filed_definitions(self, accession):
+        uri = "/services/customfield.asmx/GetCustomFieldDefinitions"
+        payload = f"site=&accessions={accession}"
+        success, response_text = self.web_request(uri, payload)
+        if success:
+            return success, response_text
+        else:
+            return success, None
+
 
     def __enter__(self):
         return self
