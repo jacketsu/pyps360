@@ -7,7 +7,8 @@ if __name__ == '__main__':
     username = "infervision"
     password = "infervision"
 
-    accession = "20117672"
+    # accession = "20117672"
+    accession = "E00040996"
     field_name = "CTRAD"
     field_value = "29997"
 
