@@ -79,7 +79,7 @@ class Powerscribe():
       
     def get_custom_filed_definitions(self, accession):
         uri = "/services/customfield.asmx/GetCustomFieldDefinitions"
-        payload = f"site=&accessions={accession}"
+        payload = f"accessions={accession}"
         success, response_text = self.web_request(uri, payload)
         if success:
             return success, response_text
