@@ -16,12 +16,12 @@ if __name__ == '__main__':
         if ps.sign_in(username, password):
             print("Signin successfully")
             # Testing setting custom field
-            # if ps.set_custom_field(accession, field_name, field_value):
-            #     print("set succeeds")
-            #     # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
-            # else:
-            #     # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
-            #     print("set fail")
+            if ps.set_custom_field(accession, field_name, field_value):
+                print("set succeeds")
+                # print(f"Sent field name {field_name} and value {field_value} into accession {accession})
+            else:
+                # print(f"Error sending field name {field_name} and value {field_value} into accession {accession}")
+                print("set fail")
             # Testing setting custom field
 
             #Test getting order
